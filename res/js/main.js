@@ -67,7 +67,7 @@ window.onload = () => {
 
 
 const canvas = document.getElementById("canvas");
-const ctx = document.getElementById("2d");
+const ctx = canvas.getContext("2d");
 
 const background = new Image();
 background.src = "./res/img/background.png";
@@ -110,16 +110,16 @@ const gameLoop = () => {
     getFps();
 
     window.requestAnimationFrame(gameLoop);
-}
+};
 
 const resizeCanvas = () => {
     canvas.width = 1280;
     canvas.height = 720;
-}
+};
 const clearCanvas = () => {
     //premalujeme cele platno pozadim hry
     ctx.drawImage(background, 0, 0, 1280, 720);
-}
+};
 const update = () => {}
 const render = () => {}
 const getFps = () => {}
@@ -127,7 +127,7 @@ const getFps = () => {}
 window.onload = () => {
     //jakmile se stranka nacte, vazadame si prvni snimek herni smycky
     window.requestAnimationFrame(gameLoop);
-}
+};
 
 
 
